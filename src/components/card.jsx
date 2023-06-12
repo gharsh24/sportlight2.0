@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 function CardL({ head, desc, src, from }) {
   return (
     <Card
-      className="mt-3 mx-3 pb-0"
+      className="mt-3 mx-3 p-2 pb-0 "
       style={{ border: "1px solid black", borderRadius: "30px" }}
     >
       <Card.Img variant="top" src={src} style={{ borderRadius: "29px" }} />
