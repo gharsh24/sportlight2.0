@@ -1,12 +1,21 @@
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-
+import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 
+const MotionButton = motion(Button);
+const MotionCard = motion(Card);
 function CardL({ head, desc, src, from }) {
   return (
-    <Card
-      className="mt-3 mx-3 pb-0"
+    <MotionCard
+      whileHover={{
+        scale: 1.2,
+        color: "black", // Change the text color to red on hover
+        border: "2px solid black", // Apply a green border with 2px width on hover
+        backgroundColor: "#0000", // Change the background color to light blue on hover
+        transition: { duration: 0.3 },
+      }}
+      className="mt-3 mx-3 pb-2"
       style={{ border: "1px solid black", borderRadius: "30px" }}
     >
       <Card.Img variant="top" src={src} style={{ borderRadius: "29px" }} />
@@ -14,13 +23,12 @@ function CardL({ head, desc, src, from }) {
       <Card.Body style={{ borderRadius: "30px" }} className="p-3">
         <Card.Title>{head}</Card.Title>
         <Card.Text>{desc}</Card.Text>
-
-        <Button variant="secondary">Read More</Button>
+        <MotionButton variant="secondary">Read More</MotionButton>
       </Card.Body>
       <Card.Footer>
-        <small className="text-muted"></small>
+        <small className="text-mute"></small>
       </Card.Footer>
-    </Card>
+    </MotionCard>
   );
 }
 CardL.propTypes = {
