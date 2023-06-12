@@ -1,10 +1,11 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-
+import { motion } from "framer-motion";
+const MotionCont = motion(Container);
 function Highlight(props) {
   return (
-    <Container>
+    <MotionCont>
       <Row>
         <Col className="d-flex justify-content-start">
           <div>
@@ -26,7 +27,7 @@ function Highlight(props) {
           </div>
         </Col>
       </Row>
-    </Container>
+    </MotionCont>
   );
 }
 
