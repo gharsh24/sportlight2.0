@@ -21,7 +21,7 @@ function CardL({ head, desc, src, from }) {
       <Card.Img variant="top" src={src} style={{ borderRadius: "29px" }} />
       <Card.Header>{from}</Card.Header>
       <Card.Body style={{ borderRadius: "30px" }} className="p-3">
-        <Card.Title>{head}</Card.Title>
+        <Card.Title style={{fontWeight:"600"}}>{head}</Card.Title>
         <Card.Text>{desc}</Card.Text>
         <MotionButton variant="secondary">Read More</MotionButton>
       </Card.Body>

@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-    <div style={{margin: "0 10%"}}>
+    <div style={{margin: "0 10%", fontFamily: "'Montserrat', sans-serif"}}>
       <Description/>
       <Highlight 
       src="https://cdn.pixabay.com/photo/2017/08/04/01/52/karate-2578819_1280.jpg"

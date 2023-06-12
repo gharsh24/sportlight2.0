@@ -13,7 +13,7 @@ function Highlight(props) {
               className="img-fluid"
               style={{
                 borderRadius: "20px",
-                maxWidth: "400px",
+                maxWidth: "550px",
                 height: "auto",
               }}
             />
@@ -21,7 +21,7 @@ function Highlight(props) {
         </Col>
         <Col className="d-flex align-items-center ">
           <div>
-            <h1 className="text-left mx-auto">{props.heading}</h1>
+            <h1 className="text-left mx-auto" style={{fontWeight:"600"}}>{props.heading}</h1>
             <p className="text-left mx-auto">{props.news}</p>
           </div>
         </Col>
