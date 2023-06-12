@@ -17,7 +17,7 @@ function CardL({ head, desc, src, from }) {
         transition: { duration: 0.5 },
         y: 10,
       }}
-      className="mt-3 mx-3 pb-2"
+      className="mt-3 mx-3 p-2 pb-0 "
       style={{ border: "1px solid black", borderRadius: "30px" }}
     >
       <Card.Img variant="top" src={src} style={{ borderRadius: "29px" }} />
@@ -36,7 +36,7 @@ function CardL({ head, desc, src, from }) {
         <small className="text-mute"></small>
       </Card.Footer>
     </MotionCard>
-  );
+);
 }
 CardL.propTypes = {
   head: PropTypes.string.isRequired,
