@@ -5,6 +5,7 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import "../css/styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+
 function App() {
   const { scrollYProgress } = useScroll();
 

@@ -41,7 +41,7 @@ function Description() {
       <h2>Your source for latest News and Highlights</h2>
       {quote ? (
         <div>
-          <blockquote style={{ fontWeight: "bold" }}>{quote}</blockquote>
+          <blockquote style={{ fontWeight: "bolder" }}>{quote}</blockquote>
           <h7>~{author}</h7>
         </div>
       ) : (
