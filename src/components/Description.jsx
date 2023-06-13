@@ -40,9 +40,10 @@ function Description() {
     >
       <h1>Shining a Spotlight on Sports </h1>
       <h2>Your source for latest News and Highlights</h2>
+      <br/>
       {quote ? (
         <div>
-          <blockquote style={{ fontWeight: "bolder" }}>{quote}</blockquote>
+          <blockquote style={{ fontWeight: "bolder" }}>"{quote}"</blockquote>
           <h7>~{author}</h7>
         </div>
       ) : (
