@@ -1,0 +1,13 @@
+
+@media only screen and (max-width: 1024px){
+    img {
+        border-radius: 20px;
+        width: 90vw;
+        height: auto;
+        
+    }
+
+    .img-div{
+        margin-bottom: 20px;
+    }
+}

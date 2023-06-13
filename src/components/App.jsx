@@ -2,7 +2,7 @@ import Navbar from "./Navbar";
 import Highlight from "./Highlight";
 import Description from "./Description";
 import Latest from "./latest";
-import Footer from "./footer/footer";
+import Footer from "./footer";
 import { motion, useScroll } from "framer-motion";
 import "../css/styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
