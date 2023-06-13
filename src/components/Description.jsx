@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 
 function Description() {
   const [quote, setQuote] = useState(null);
@@ -28,10 +28,11 @@ function Description() {
   return (
     <div
       style={{
-        margin: "5% 0",
+        // margin: "5% 0",
         textAlign: "center",
         backgroundColor: "#C2DEDC",
-        margin: "3.5% 2.1%",
+        margin: "0rem 3rem",
+        marginBottom:"3rem",
         padding: "5%",
         borderRadius: "20px",
         fontFamily: "'Montserrat','sans-serif'",

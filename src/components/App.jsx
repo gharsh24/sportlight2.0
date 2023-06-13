@@ -1,16 +1,20 @@
+import Navbar from "./Navbar/Navbar";
 import Highlight from "./Highlight";
 import Description from "./Description";
 import Latest from "./latest";
-import { motion, useScroll, useSpring } from "framer-motion";
+import Footer from "./footer/footer";
+import { motion, useScroll } from "framer-motion";
 import "../css/styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 
 
 function App() {
   const { scrollYProgress } = useScroll();
 
   return (
-    <div style={{ margin: "0 10%" }}>
+    <div >
+      <Navbar />
       <motion.div
         className="progress-bar"
         style={{ scaleX: scrollYProgress }}
@@ -24,6 +28,7 @@ function App() {
       <Latest />
       <Latest />
       <Latest />
+      <Footer />
     </div>
   );
 }
