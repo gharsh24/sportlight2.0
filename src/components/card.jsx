@@ -36,7 +36,7 @@ function CardL({ head, desc, src, from }) {
         <small className="text-mute"></small>
       </Card.Footer>
     </MotionCard>
-);
+  );
 }
 CardL.propTypes = {
   head: PropTypes.string.isRequired,
