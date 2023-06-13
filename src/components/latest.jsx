@@ -1,43 +1,66 @@
+import React, { useEffect, useState } from "react";
 import CardGroup from "react-bootstrap/CardGroup";
 import CardL from "./card";
+import firebaseConfig from "./config";
+import { initializeApp } from "firebase/app";
+import {
+  getFirestore,
+  collection,
+  query,
+  getDocs,
+  limit,
+  orderBy,
+} from "firebase/firestore";
 
 function Latest() {
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+  const pageSize = 3; // Number of news articles to fetch per page
+  const batchCount = 3; // Number of batches to display
+
+  const [newsData, setNewsData] = useState([]);
+
+  useEffect(() => {
+    const fetchNewsData = async () => {
+      try {
+        const q = query(
+          collection(db, "All News Info"),
+          orderBy("publishedAt", "desc"),
+          limit(pageSize * batchCount)
+        );
+        const snapshot = await getDocs(q);
+        const data = snapshot.docs.map((doc) => doc.data());
+        setNewsData(data);
+      } catch (error) {
+        console.log("Error fetching news data from Firestore:", error);
+      }
+    };
+
+    fetchNewsData();
+  }, []);
+
   return (
     <div>
       <h3 style={{ marginTop: "4%", marginLeft: "3%", fontWeight: "bold" }}>
         Latest News
       </h3>
 
-      <CardGroup>
-        <CardL
-          src="https://cdn.pixabay.com/photo/2017/08/04/01/52/karate-2578819_1280.jpg
-        "
-          from="Boxing 3hrs ago"
-          head="Hello World"
-          desc="The quick brown fox jumps over the lazy dog and finds a hidden treasure beneath the ancient oak tree near the sparkling river"
-        />
-        <CardL
-          src="https://cdn.pixabay.com/photo/2017/08/04/01/52/karate-2578819_1280.jpg"
-          head="Hello World"
-          from="Boxing 3hrs ago"
-          desc="The quick brown fox jumps over the lazy dog and finds a hidden treasure beneath the ancient oak tree near the sparkling river"
-        />{" "}
-        <CardL
-          src="https://cdn.pixabay.com/photo/2017/08/04/01/52/karate-2578819_1280.jpg
-
-      "
-          from="Boxing 3hrs ago"
-          head="Hello World"
-          desc="The quick brown fox jumps over the lazy dog and finds a hidden treasure beneath the ancient oak tree near the sparkling river"
-        />{" "}
-        <CardL
-          src="https://cdn.pixabay.com/photo/2017/08/04/01/52/karate-2578819_1280.jpg
-    "
-          head="Hello World"
-          from="Boxing 3hrs ago"
-          desc="The quick brown fox jumps over the lazy dog and finds a hidden treasure beneath the ancient oak tree near the sparkling river"
-        />
-      </CardGroup>
+      {Array.from({ length: batchCount }, (_, index) => (
+        <CardGroup key={index}>
+          {newsData
+            .slice(index * pageSize, (index + 1) * pageSize)
+            .map((article, innerIndex) => (
+              <CardL
+                key={innerIndex}
+                src={article.imageURL}
+                from={article.publishedAt}
+                head={article.Title}
+                desc={article.Content}
+                URL={article.URL}
+              />
+            ))}
+        </CardGroup>
+      ))}
     </div>
   );
 }
