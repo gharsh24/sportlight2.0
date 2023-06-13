@@ -29,10 +29,10 @@ function Description() {
     <div
       style={{
         // margin: "5% 0",
+        top:"5%",
         textAlign: "center",
         backgroundColor: "#C2DEDC",
-        margin: "0rem 3rem",
-        marginBottom:"3rem",
+        margin: "5rem 3rem 3rem 3rem",
         padding: "5%",
         borderRadius: "20px",
         fontFamily: "'Montserrat','sans-serif'",
