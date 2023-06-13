@@ -1,22 +1,22 @@
-<<<<<<< HEAD
 function Description() {
-  
-
-function Description(){
-    return ( <div style={
-        {margin:"5% 0", 
-        textAlign: "center", 
-        backgroundColor: "#C2DEDC" ,
-        margin: "3.5% 2.1%", 
-        padding: "5%" ,
-        borderRadius: "20px",
-        fontFamily:"'Montserrat','sans-serif'"}}>
-        <h1 >Shining a Spotlight on Sports </h1>
+  function Description() {
+    return (
+      <div
+        style={{
+          margin: "5% 0",
+          textAlign: "center",
+          backgroundColor: "#C2DEDC",
+          margin: "3.5% 2.1%",
+          padding: "5%",
+          borderRadius: "20px",
+          fontFamily: "'Montserrat','sans-serif'",
+        }}
+      >
+        <h1>Shining a Spotlight on Sports </h1>
         <h2>Your source for latest News and Highlights</h2>
-        
->>>>>>> 4990cab036b73265f83259dbc7cb98ed9d0d8dc2
-    </div>
-  );
+      </div>
+    );
+  }
 }
 
 export default Description;
