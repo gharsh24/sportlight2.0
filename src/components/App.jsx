@@ -1,4 +1,4 @@
-import Navbar from "./Navbar/Navbar";
+import Navbar from "./Navbar";
 import Highlight from "./Highlight";
 import Description from "./Description";
 import Latest from "./latest";
