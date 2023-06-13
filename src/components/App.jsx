@@ -6,14 +6,14 @@ import Footer from "./footer";
 import { motion, useScroll } from "framer-motion";
 import "../css/styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-
+import DataFromApi from "./data";
 
 function App() {
   const { scrollYProgress } = useScroll();
 
   return (
-    <div >
+    <div>
+      <DataFromApi />
       <Navbar />
       <motion.div
         className="progress-bar"
@@ -25,8 +25,6 @@ function App() {
         heading="Hello World"
         news="The quick brown fox jumps over the lazy dog and finds a hidden treasure beneath the ancient oak tree near the sparkling river."
       />
-      <Latest />
-      <Latest />
       <Latest />
       <Footer />
     </div>

@@ -5,16 +5,16 @@ import PropTypes from "prop-types";
 
 const MotionButton = motion(Button);
 const MotionCard = motion(Card);
-function CardL({ head, desc, src, from }) {
+function CardL({ head, desc, src, from, URL }) {
   return (
     <MotionCard
       whileHover={{
-        scale: 1.12,
+        scale: 1.01,
         color: "black", // Change the text color to red on hover
         border: "2px solid black", // Apply a green border with 2px width on hover
         backgroundColor: "#0000", // Change the background color to light blue on hover
         transition: { duration: 0.3 },
-        y: 13,
+        y: 15,
       }}
       className="mt-3 mx-3 p-2 pb-0 "
       style={{ border: "1px solid black", borderRadius: "30px" }}
@@ -22,16 +22,18 @@ function CardL({ head, desc, src, from }) {
       <Card.Img variant="top" src={src} style={{ borderRadius: "29px" }} />
       <Card.Header>{from}</Card.Header>
       <Card.Body
-        style={{ borderRadius: "30px", fontFamily: "'Tinos','sans-serif'" }}
+        style={{ borderRadius: "25px", fontFamily: "'Tinos','sans-serif'" }}
         className="p-3"
       >
         <Card.Title style={{ fontWeight: "700", fontSize: "1.5rem" }}>
           {head}
         </Card.Title>
         <Card.Text>{desc}</Card.Text>
-        <MotionButton whileTap={{ scale: 0.8 }} variant="secondary">
-          Read More
-        </MotionButton>
+        <a href={URL}>
+          <MotionButton whileTap={{ scale: 0.8 }} variant="secondary">
+            Read More
+          </MotionButton>
+        </a>
       </Card.Body>
       <Card.Footer>
         <small className="text-mute"></small>
@@ -44,6 +46,7 @@ CardL.propTypes = {
   desc: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,
   from: PropTypes.string.isRequired,
+  URL: PropTypes.string.isRequired,
 };
 
 export default CardL;
