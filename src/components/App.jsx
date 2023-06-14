@@ -7,6 +7,7 @@ import { motion, useScroll } from "framer-motion";
 import "../css/styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import DataFromApi from "./data";
+import Upcoming from "./upcoming";
 
 function App() {
   const { scrollYProgress } = useScroll();
@@ -20,11 +21,12 @@ function App() {
         style={{ scaleX: scrollYProgress }}
       />
       <Description />
-      <Highlight
-        src="https://cdn.pixabay.com/photo/2020/03/10/16/47/moon-4919501_640.jpg"
-        heading="Hello World"
+      {/* <Highlight
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/UFC_290_poster.jpg/220px-UFC_290_poster.jpg"
+        heading="Upcoming Event UFC 290"
         news="The quick brown fox jumps over the lazy dog and finds a hidden treasure beneath the ancient oak tree near the sparkling river."
-      />
+      /> */}
+      <Upcoming />
       <Latest />
       <Footer />
     </div>
