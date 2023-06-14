@@ -10,34 +10,33 @@ function CardL({ head, desc, src, from, URL }) {
     <MotionCard
       whileHover={{
         scale: 1.01,
-        color: "black", // Change the text color to red on hover
+        color: "white", // Change the text color to red on hover
         border: "2px solid black", // Apply a green border with 2px width on hover
-        backgroundColor: "red", // Change the background color to light blue on hover
+        backgroundColor: "#00C4FF", // Change the background color to light blue on hover
         transition: { duration: 0.3 },
         y: 15,
       }}
-      className="mt-3 mx-3 p-2 pb-0 "
-      style={{ border: "1px solid black", borderRadius: "30px", height: "auto", width: "30%" }}
+      className="mt-3 mx-3 pb-0 "
+      style={{ border: "1px solid black", borderRadius: "30px", maxHeight: "60vh" }}
     >
-      <Card.Img variant="top" src={src} style={{ borderRadius: "29px" }} />
+      <Card.Img variant="top" src={src} style={{ borderRadius: "29px", maxWidth:"none",height:"38%", width:"auto" }} />
       <Card.Header>{from}</Card.Header>
       <Card.Body
-        style={{ borderRadius: "25px", fontFamily: "'Tinos','sans-serif'" }}
+        style={{ borderRadius: "25px", fontFamily: "'Tinos',serif" }}
         className="p-3"
       >
-        <Card.Title style={{ fontWeight: "700", fontSize: "1.5rem" }}>
+        <Card.Title style={{ fontWeight: "700", fontSize: "1.17rem" , height: "19%"}}>
           {head}
         </Card.Title>
-        <Card.Text>{desc}</Card.Text>
+        <br/>
+        <Card.Text style={{height:"45%", fontSize: "0.84rem"}}>{desc}</Card.Text>
         <a href={URL}>
-          <MotionButton whileTap={{ scale: 0.8 }} variant="secondary">
+          <MotionButton whileTap={{ scale: 0.8 }} variant="secondary" style={{position:"absolute", bottom:"9px"}}>
             Read More
           </MotionButton>
         </a>
       </Card.Body>
-      <Card.Footer>
-        <small className="text-mute"></small>
-      </Card.Footer>
+     
     </MotionCard>
   );
 }

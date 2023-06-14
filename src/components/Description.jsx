@@ -38,7 +38,7 @@ function Description() {
         fontFamily: "'Montserrat','sans-serif'",
       }}
     >
-      <h1>Shining a Spotlight on Sports </h1>
+      <h1>Shining a <span style={{fontFamily:"'Kaushan Script', cursive", fontSize:"2.8rem"}}>Spotlight</span>  on <span style={{fontFamily:"'Kaushan Script', cursive", fontSize:"2.8rem"}}>Sports</span> </h1>
       <h2>Your source for latest News and Highlights</h2>
       <br />
       {quote ? (

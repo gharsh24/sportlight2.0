@@ -26,8 +26,10 @@ function App() {
         heading="Upcoming Event UFC 290"
         news="The quick brown fox jumps over the lazy dog and finds a hidden treasure beneath the ancient oak tree near the sparkling river."
       /> */}
-      <Upcoming />
+      
       <Latest />
+      <br/>
+      <Upcoming />
       <Footer />
     </div>
   );

@@ -40,10 +40,12 @@ function Latest() {
   }, []);
 
   return (
-    <div style={{padding: "0 5%"}}>
-    <h3 style={{ marginTop: "4%", marginLeft: "3%", fontWeight: "bold" }}>
+    <div style={{padding: "0 5%", margin:"7% 0"}}>
+    <h3 style={{ marginTop: "4%", marginLeft: "3%", fontWeight: "bold", fontFamily:"'Titillium Web', sans-serif",fontSize:"2.8rem", textAlign:"center" }}>
         Latest News
       </h3>
+      <br/>
+      <br/>
 
       {Array.from({ length: batchCount }, (_, index) => (
         <CardGroup key={index}>

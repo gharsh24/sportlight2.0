@@ -10,9 +10,12 @@ function Upcoming() {
 
   return (
     <div>
-      <h1 className="text-center mx-auto mb-4" style={{ fontWeight: "700" }}>
+      <h1 className="text-center mx-auto mb-4" style={{ fontWeight: "700" ,fontFamily:"'Titillium Web','sans-serif' "}}>
         Upcoming Sports Events
       </h1>
+      <br/>
+      <br/>
+      <br/>
       <div
         style={{
           display: "flex",
