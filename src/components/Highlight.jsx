@@ -14,9 +14,11 @@ function Highlight(props) {
               src={props.src}
               className="img-fluid"
               style={{
-              borderRadius: "20px",
-              maxWidth: "550px",
-              height: "auto"}}  
+                borderRadius: "20px",
+
+                maxWidth: "550px",
+                height: "auto",
+              }}
             />
           </div>
         </Col>

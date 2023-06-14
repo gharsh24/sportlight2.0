@@ -55,7 +55,7 @@ function Latest() {
                 src={article.imageURL}
                 from={article.publishedAt}
                 head={article.Title}
-                desc={article.Content}
+                desc={article.Content.split(" ").slice(0, 35).join(" ") + "..."}
                 URL={article.URL}
               />
             ))}
