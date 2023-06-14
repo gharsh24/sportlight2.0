@@ -25,6 +25,7 @@ function App() {
         heading="Hello World"
         news="The quick brown fox jumps over the lazy dog and finds a hidden treasure beneath the ancient oak tree near the sparkling river."
       />
+      
       <Latest />
       <Footer />
     </div>

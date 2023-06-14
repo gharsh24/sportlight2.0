@@ -40,8 +40,8 @@ function Latest() {
   }, []);
 
   return (
-    <div>
-      <h3 style={{ marginTop: "4%", marginLeft: "3%", fontWeight: "bold" }}>
+    <div style={{padding: "0 5%"}}>
+    <h3 style={{ marginTop: "4%", marginLeft: "3%", fontWeight: "bold" }}>
         Latest News
       </h3>
 

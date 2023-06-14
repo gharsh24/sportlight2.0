@@ -12,12 +12,12 @@ function CardL({ head, desc, src, from, URL }) {
         scale: 1.01,
         color: "black", // Change the text color to red on hover
         border: "2px solid black", // Apply a green border with 2px width on hover
-        backgroundColor: "#0000", // Change the background color to light blue on hover
+        backgroundColor: "red", // Change the background color to light blue on hover
         transition: { duration: 0.3 },
         y: 15,
       }}
       className="mt-3 mx-3 p-2 pb-0 "
-      style={{ border: "1px solid black", borderRadius: "30px" }}
+      style={{ border: "1px solid black", borderRadius: "30px", height: "auto", width: "30%" }}
     >
       <Card.Img variant="top" src={src} style={{ borderRadius: "29px" }} />
       <Card.Header>{from}</Card.Header>
