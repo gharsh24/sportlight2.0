@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-import "../css/footer.css"
-=======
 import "./footer.css"
->>>>>>> 45483ae0fe5f3931dddd244349be56726e268458
+
 
 function footer(){
   return (
