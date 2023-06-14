@@ -2,6 +2,7 @@ import Navbar from "./Navbar";
 import Highlight from "./Highlight";
 import Description from "./Description";
 import Latest from "./latest";
+import CardPicker from "./CardPicker";
 import Footer from "./footer";
 import { motion, useScroll } from "framer-motion";
 import "../css/styles.css";
@@ -30,6 +31,7 @@ function App() {
       <Latest />
       <br/>
       <Upcoming />
+      <CardPicker />
       <Footer />
     </div>
   );
