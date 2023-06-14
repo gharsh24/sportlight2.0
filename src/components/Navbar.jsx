@@ -12,7 +12,7 @@ function Navbar() {
 	};
 
 	return (
-		<header style={{fontFamily:"'Titillium Web', 'sans-serif'"}}>
+		<header style={{fontFamily:"'Titillium Web', sans-serif"}}>
 			<div>
 			<h3>LOGO</h3>
 			</div>
