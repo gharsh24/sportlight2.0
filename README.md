@@ -2,8 +2,8 @@
 
 Sportslight is a sports blog website that fetches data from the News API to display the latest sporting blogs on our platform. It is built using React and incorporates various technologies such as React Bootstrap, React Router, Styled Components, and APIs for fetching blogs and sports quotes. The fetched data is stored in a Firebase database. The website also provides information about upcoming sporting events.
 ![Screenshot 2023-06-15 183043](https://github.com/gharsh24/sportlight2.0/assets/97461390/6e936c34-9c51-4f72-8217-7da8d468bfb5)
-![Sc![Screenshot 2023-06-15 183750](https://github.com/gharsh24/sportlight2.0/assets/97461390/eeafb723-743a-4174-920f-5363a659ed66)
-reenshot 2023-06-15 183235](https://github.com/gharsh24/sportlight2.0/assets/97461390/9e3046e1-7d58-469b-ad68-f40bfa98adae)
+![Screenshot 2023-06-15 183750](https://github.com/gharsh24/sportlight2.0/assets/97461390/eeafb723-743a-4174-920f-5363a659ed66)
+![Screenshot 2023-06-15 183235](https://github.com/gharsh24/sportlight2.0/assets/97461390/9e3046e1-7d58-469b-ad68-f40bfa98adae)
 
 ## Features
 
