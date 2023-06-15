@@ -26,10 +26,12 @@ function App() {
         src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/UFC_290_poster.jpg/220px-UFC_290_poster.jpg"
         heading="Upcoming Event UFC 290"
         news="The quick brown fox jumps over the lazy dog and finds a hidden treasure beneath the ancient oak tree near the sparkling river."
-      /> */}
-      
+      /> 
+      hello 
+      */}
+
       <Latest />
-      <br/>
+      <br />
       <Upcoming />
       <CardPicker />
       <Footer />
