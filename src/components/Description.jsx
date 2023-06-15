@@ -31,7 +31,7 @@ function Description() {
         // margin: "5% 0",
         top: "5%",
         textAlign: "center",
-        backgroundColor: "#C2DEDC",
+        backgroundColor: "#9ED8D4",
         margin: "5rem 3rem 3rem 3rem",
         padding: "5%",
         borderRadius: "20px",
@@ -63,9 +63,10 @@ function Description() {
       {quote ? (
         <div
           style={{
-            backgroundColor: "#bcd0eb",
-            border: "1px solid blue",
+            backgroundColor: "#B4DAD7",
             borderRadius: "10px",
+            color:"#181467",
+            padding:" 15px 0"
           }}
         >
           <blockquote style={{ fontWeight: "bolder" }}>"{quote}"</blockquote>
