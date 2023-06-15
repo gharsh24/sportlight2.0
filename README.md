@@ -58,7 +58,7 @@ To run Sportslight locally, follow these steps:
 
 ## Deployment
 
-Sportslight is currently live at [https://sportslight.netlify.app/.com] Here. To deploy the project to your own domain or hosting platform, you can follow these general steps:
+Sportslight is currently live at [https://sportslight.netlify.app] . To deploy the project to your own domain or hosting platform, you can follow these general steps:
 
 1. Build the project:
 
