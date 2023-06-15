@@ -38,11 +38,36 @@ function Description() {
         fontFamily: "'Montserrat','sans-serif'",
       }}
     >
-      <h1>Shining a <span style={{fontFamily:"'Kaushan Script', cursive", fontSize:"2.8rem"}}>Spotlight</span>  on <span style={{fontFamily:"'Kaushan Script', cursive", fontSize:"2.8rem"}}>Sports</span> </h1>
+      <h1>
+        Shining a{" "}
+        <span
+          style={{
+            fontFamily: "'Kaushan Script', cursive",
+            fontSize: "2.8rem",
+          }}
+        >
+          Spotlight
+        </span>{" "}
+        on{" "}
+        <span
+          style={{
+            fontFamily: "'Kaushan Script', cursive",
+            fontSize: "2.8rem",
+          }}
+        >
+          Sports
+        </span>{" "}
+      </h1>
       <h2>Your source for latest News and Highlights</h2>
       <br />
       {quote ? (
-        <div>
+        <div
+          style={{
+            backgroundColor: "#bcd0eb",
+            border: "1px solid blue",
+            borderRadius: "10px",
+          }}
+        >
           <blockquote style={{ fontWeight: "bolder" }}>"{quote}"</blockquote>
           <h7>~{author}</h7>
         </div>

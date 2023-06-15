@@ -155,7 +155,7 @@ function DataFromApi() {
       });
       // Store data in Firestore
       const batch = writeBatch(db);
-      articles.slice(0, 30).forEach((article, index) => {
+      articles.slice(0, 10).forEach((article, index) => {
         const docRef = doc(collection(db, "All News Info"), `news-${index}`);
         batch.set(docRef, {
           Content: article.content,

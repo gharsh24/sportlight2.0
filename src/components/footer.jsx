@@ -1,4 +1,4 @@
-import "../css/footer.css"
+import "../css/footer.css";
 
 function footer() {
   return (
@@ -39,7 +39,7 @@ function footer() {
           </section>
           <section>
             <h3>ANY QUESTIONS?</h3>
-            <a href="emailto:amanmuhal02@gmail.com">
+            <a href="mailto:amanmuhal02@gmail.com">
               <span>
                 <i className="fa fa-envelope" />
               </span>

@@ -3,42 +3,40 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import "../css/Navbar.css";
 
 function Navbar() {
-	const navRef = useRef();
+  const navRef = useRef();
 
-	const showNavbar = () => {
-		navRef.current.classList.toggle(
-			"responsive_nav"
-		);
-	};
+  const showNavbar = () => {
+    navRef.current.classList.toggle("responsive_nav");
+  };
 
-	return (
-		<header style={{fontFamily:"'Titillium Web', sans-serif"}}>
-			<div>
-			<h3>LOGO</h3>
-			</div>
-			
-			<nav ref={navRef}>
-				<a href="/#">Home</a>
-				<a href="/#">Stories</a>
-				<a href="/#">Community</a>
-				<a href="/#">Subscribe</a>
-				<button
-					className="nav-btn nav-close-btn"
-					onClick={showNavbar}>
-					<FaTimes />
-				</button>
-				
-			</nav>
-			
-			<button
-				className="nav-btn"
-				onClick={showNavbar}>
-				<FaBars />
-			</button>
+  return (
+    <header style={{ fontFamily: "'Titillium Web', sans-serif" }}>
+      <div>
+        <h3
+          style={{
+            fontFamily: "'Kaushan Script', cursive",
+            fontSize: "1.8rem",
+          }}
+        >
+          Sportslight{" "}
+        </h3>
+      </div>
 
-			
-		</header>
-	);
+      <nav ref={navRef}>
+        <a href="#">Home</a>
+        <a href="#stories">Stories</a>
+        <a href="#upcoming">Upcoming Events</a>
+        <a href="#subscribe">Subscribe</a>
+        <button className="nav-btn nav-close-btn" onClick={showNavbar}>
+          <FaTimes />
+        </button>
+      </nav>
+
+      <button className="nav-btn" onClick={showNavbar}>
+        <FaBars />
+      </button>
+    </header>
+  );
 }
 
 export default Navbar;
