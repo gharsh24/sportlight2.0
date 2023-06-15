@@ -48,7 +48,6 @@ function CardPicker() {
     <div style={bodyStyle}>
     <div onClick={handleDocumentClick} style={myStyle}>
       <div
-        
         className={`cardcardPicker ${selectedCard === 1 ? 'selected' : 'blur'}`}
         onClick={() => selectImage(1)}
       >

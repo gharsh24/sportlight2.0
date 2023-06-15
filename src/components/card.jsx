@@ -12,7 +12,7 @@ function CardL({ head, desc, src, from, URL }) {
         scale: 1.01,
         color: "white", // Change the text color to red on hover
         border: "2px solid black", // Apply a green border with 2px width on hover
-        backgroundColor: "#00C4FF", // Change the background color to light blue on hover
+        backgroundColor: "#29335c", // Change the background color to light blue on hover
         transition: { duration: 0.3 },
         y: 15,
       }}

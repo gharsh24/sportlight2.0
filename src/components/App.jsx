@@ -31,7 +31,6 @@ function App() {
       <Latest />
       <br/>
       <Upcoming />
-      <CardPicker />
       <Footer />
     </div>
   );
