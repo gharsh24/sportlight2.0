@@ -40,12 +40,21 @@ function Latest() {
   }, []);
 
   return (
-    <div style={{padding: "0 5%", margin:"7% 0"}}>
-    <h3 style={{ marginTop: "4%", marginLeft: "3%", fontWeight: "bold", fontFamily:"'Titillium Web', sans-serif",fontSize:"2.8rem", textAlign:"center" }}>
+    <div style={{ padding: "0 5%", margin: "7% 0" }}>
+      <h3
+        style={{
+          marginTop: "4%",
+          marginLeft: "3%",
+          fontWeight: "bold",
+          fontFamily: "'Titillium Web', sans-serif",
+          fontSize: "2.8rem",
+          textAlign: "center",
+        }}
+      >
         Latest News
       </h3>
-      <br/>
-      <br/>
+      <br />
+      <br />
 
       {Array.from({ length: batchCount }, (_, index) => (
         <CardGroup key={index}>
@@ -57,7 +66,7 @@ function Latest() {
                 src={article.imageURL}
                 from={article.publishedAt}
                 head={article.Title}
-                desc={article.Content.split(" ").slice(0, 35).join(" ") + "..."}
+                desc={article.Content.split(" ").slice(0, 30).join(" ") + "..."}
                 URL={article.URL}
               />
             ))}

@@ -9,30 +9,64 @@ import "../css/styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import DataFromApi from "./data";
 import Upcoming from "./upcoming";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 function App() {
-  const { scrollYProgress } = useScroll();
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsSmallScreen(window.matchMedia("(max-width:1000px)").matches);
+    };
+
+    // Initial check
+    checkScreenSize();
+
+    // Event listener for screen size changes
+    window.addEventListener("resize", checkScreenSize);
+
+    // Clean up the event listener on component unmount
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
 
   return (
-    <div>
-      <DataFromApi />
-      <Navbar />
-      <motion.div
-        className="progress-bar"
-        style={{ scaleX: scrollYProgress }}
-      />
-      <Description />
-      {/* <Highlight
-        src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/UFC_290_poster.jpg/220px-UFC_290_poster.jpg"
-        heading="Upcoming Event UFC 290"
-        news="The quick brown fox jumps over the lazy dog and finds a hidden treasure beneath the ancient oak tree near the sparkling river."
-      /> */}
-      
-      <Latest />
-      <br/>
-      <Upcoming />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        {" "}
+        <Route
+          path="/"
+          element={
+            <React.Fragment>
+              <DataFromApi />
+              <Navbar />
+
+              <Description />
+              <div id="stories">
+                <Latest />
+              </div>
+              <br />
+              {/* <div id="upcoming">
+                <Upcoming />
+              </div> */}
+              {/* Conditionally render the Upcoming component */}
+              {!isSmallScreen && (
+                <div id="upcoming">
+                  <Upcoming />
+                </div>
+              )}
+              <div id="subscribe">
+                <Footer />
+              </div>
+            </React.Fragment>
+          }
+        />
+        {/* <Route path="/stories" element={<Latest />} />
+        <Route path="/upcoming" element={<Upcoming />} />
+        <Route path="/subscribe" element={<Footer />} /> */}
+      </Routes>
+    </Router>
   );
 }
 
