@@ -170,7 +170,7 @@ function Upcoming() {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="https://scontent.fdel27-4.fna.fbcdn.net/v/t39.30808-6/314362233_1299307447312951_2684323165888966981_n.jpg?_nc_cat=100&cb=99be929b-3346023f&ccb=1-7&_nc_sid=730e14&_nc_ohc=2LIPP3LNNkYAX_dLfxB&_nc_ht=scontent.fdel27-4.fna&oh=00_AfD3Z6K6nJ5Of7LVwuZBXDoTSZaTpozWnnG4sZziiiUCuw&oe=648D5E4A"
+                src="https://pbs.twimg.com/media/FznQM75WIAEgfZD.jpg"
                 alt="Second slide"
                 style={{
                   width: "100%",
